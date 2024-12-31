@@ -9,18 +9,51 @@ PATH
 GEM
   remote: https://rubygems.org/
   specs:
+    activesupport (8.0.1)
+      base64
+      benchmark (>= 0.3)
+      bigdecimal
+      concurrent-ruby (~> 1.0, >= 1.3.1)
+      connection_pool (>= 2.2.5)
+      drb
+      i18n (>= 1.6, < 2)
+      logger (>= 1.4.2)
+      minitest (>= 5.1)
+      securerandom (>= 0.3)
+      tzinfo (~> 2.0, >= 2.0.5)
+      uri (>= 0.13.1)
     addressable (2.8.4)
       public_suffix (>= 2.0.2, < 6.0)
     ast (2.4.2)
+    base64 (0.2.0)
+    benchmark (0.4.0)
+    bigdecimal (3.1.9)
     coderay (1.1.3)
+    concurrent-ruby (1.3.4)
+    connection_pool (2.4.1)
     crack (0.4.5)
       rexml
     diff-lcs (1.5.0)
     dotenv (2.8.1)
+    drb (2.2.1)
+    event_stream_parser (1.0.0)
+    faraday (2.12.2)
+      faraday-net_http (>= 2.0, < 3.5)
+      json
+      logger
+    faraday-net_http (3.4.0)
+      net-http (>= 0.5.0)
+    groq (0.3.2)
+      activesupport (> 5)
+      event_stream_parser (~> 1.0)
+      faraday (>= 1.10.0)
+      json
     hashdiff (1.0.1)
     httparty (0.21.0)
       mini_mime (>= 1.0.0)
       multi_xml (>= 0.5.2)
+    i18n (1.14.6)
+      concurrent-ruby (~> 1.0)
     json (2.6.3)
     language_server-protocol (3.17.0.3)
     lint_roller (1.0.0)
@@ -28,9 +61,13 @@ GEM
       llm_memory (~> 0.1.7)
       pg (~> 1.5.3)
       pgvector (~> 0.2.0)
+    logger (1.6.4)
     method_source (1.0.0)
     mini_mime (1.1.2)
+    minitest (5.25.4)
     multi_xml (0.6.0)
+    net-http (0.6.0)
+      uri
     parallel (1.23.0)
     parser (3.2.2.1)
       ast (~> 2.4.1)
@@ -42,6 +79,7 @@ GEM
     public_suffix (5.0.1)
     rainbow (3.1.1)
     rake (13.0.6)
+    rb_sys (0.9.105)
     redis (4.6.0)
     regexp_parser (2.8.0)
     rexml (3.2.5)
@@ -76,6 +114,7 @@ GEM
     ruby-openai (3.7.0)
       httparty (>= 0.18.1)
     ruby-progressbar (1.13.0)
+    securerandom (0.4.1)
     standard (1.28.0)
       language_server-protocol (~> 3.17.0.2)
       lint_roller (~> 1.0)
@@ -87,9 +126,12 @@ GEM
     standard-performance (1.0.1)
       lint_roller (~> 1.0)
       rubocop-performance (~> 1.16.0)
-    tokenizers (0.3.3-arm64-darwin)
-    tokenizers (0.3.3-x86_64-linux)
+    tokenizers (0.3.3)
+      rb_sys
+    tzinfo (2.0.6)
+      concurrent-ruby (~> 1.0)
     unicode-display_width (2.4.2)
+    uri (1.0.2)
     vcr (6.1.0)
     webmock (3.18.1)
       addressable (>= 2.8.0)
@@ -102,6 +144,7 @@ PLATFORMS
 
 DEPENDENCIES
   dotenv
+  groq (~> 0.3.2)
   llm_memory!
   llm_memory_pgvector
   pry
@@ -115,4 +158,4 @@ DEPENDENCIES
   webmock (~> 3.18.1)
 
 BUNDLED WITH
-   2.4.6
+   2.5.11

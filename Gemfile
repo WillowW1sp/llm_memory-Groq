@@ -17,3 +17,5 @@ gem "llm_memory_pgvector"
 # dev
 gem "dotenv"
 gem "pry"
+
+gem "groq", "~> 0.3.2"
