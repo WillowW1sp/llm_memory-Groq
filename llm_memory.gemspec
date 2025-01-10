@@ -34,7 +34,7 @@ Gem::Specification.new do |spec|
   spec.add_dependency "tokenizers", "~> 0.3.3"
   spec.add_dependency "ruby-openai", "~> 3.7.0"
   spec.add_dependency "redis", "~> 4.6.0"
-
+  spec.add_dependency "groq", "~> 0.3.2"
   # For more information and examples about making a new gem, check out our
   # guide at: https://bundler.io/guides/creating_gem.html
 end
