@@ -3,6 +3,8 @@
 LLM Memory is a Ruby gem designed to provide large language models (LLMs) like ChatGPT with memory using in-context learning.
 This enables better integration with systems such as Rails and web services while providing a more user-friendly and abstract interface based on brain terms.
 
+
+This is a modified version that will be used for the Groq LLM 
 ## Key Features
 
 - In-context learning through input prompt context insertion
